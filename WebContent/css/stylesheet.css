@@ -1,0 +1,70 @@
+#idFlexLoginForm {
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 5px;
+    position: fixed;
+    left: 30%;
+    top: 35%;
+    padding: 5px;
+}
+
+#idFlexLoginFormLap {
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 5px;
+    position: fixed;
+    left: 40%;
+    top: 30%;
+    padding: 5px;
+}
+
+#idtxtUsername,#idtxtPassword,#idtxtOldPassword,#idtxtNewPassword,#idtxtConfirmPassword,#idtxtUserID{
+       width:200px;
+       height:43px;
+       border:1px solid #cccccc;
+       border-bottom-right-radius:5px;
+       border-top-right-radius:5px;
+       color:#707277;
+       font-weight: bold;
+       font:14px arial,sans-serif ;
+       margin:0px 0px 7px;
+       
+}
+#idBtnLogin{
+       padding:8px 75px 8px;
+}
+#idUserImg,#idPswdImg{
+       width:45px;
+       height:43px;
+}
+.fontWelcome{
+       color: #707277;
+       font:32px arial,sans-serif ;
+}
+.fontWelcomeRed{
+       color: #006ca7;
+       font:32px arial,sans-serif ;
+       font-weight:bold;
+}
+#idFlexBoxNewUser{
+       position:absolute;
+       bottom:10%;
+       left:43%;
+}
+
+.submitBtn{
+border: 1px solid #cc292b;
+height: 38px;
+font:14px arial,sans-serif;
+border-radius: 4px;
+background-color: #70ebaa !important;
+color: black !important;
+font-weight: bolder !important;
+}
+
+.submitBtn:hover{
+background-color: #70ebaa !important;
+}
+
+.submitBtn:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}

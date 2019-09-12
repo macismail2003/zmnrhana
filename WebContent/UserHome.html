@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+		<meta http-equiv='cache-control' content='no-cache'>
+		<meta http-equiv='expires' content='0'>
+		<meta http-equiv='pragma' content='no-cache'>
+		<title>M & R Platform</title>
+		<script src="resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m,sap.ui.table,sap.ui.commons,sap.ui.comp"
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+
+		<link rel="stylesheet" href="css/newstyle.css" media="all">
+
+		<!-- <link rel="stylesheet" href="xzoom/xzoom.css">	,sap.viz
+		<script src="xzoom/xzoom.js"></script>
+		<link rel="stylesheet" href="xzoom/jquery.spzoom.css">
+		<script src="xzoom/jquery.spzoom.js"></script>
+		<script src="xzoom/jquery.imageLens.js"></script>
+		<script src="xzoom/jquery.zoom.min.js"></script> -->
+
+		<script src="js1/Login/LoginView.js"></script>
+		<script src="js1/mains.js?n=1"></script>
+		<script src="js1/cdashm1.js?n=1"></script>
+		<script src="js1/sdashm1.js?n=1"></script>
+		<script src="js1/sdashm2.js?n=2"></script>
+		<script src="js1/sdashm2EDI.js?n=2"></script>
+		<script src="js1/sdashmpic.js?n=1"></script>
+
+		<script src="js1/sdashm3.js?n=1"></script>
+		<script src="js1/sdashm3doc.js?n=1"></script>
+		<script src="js1/sdashm3edit.js?n=1"></script>
+		<script src="js1/sdashm2ls.js?n=1"></script>
+
+		<script src="js1/newfnetafilters.js?n=1"></script>
+		<script src="js1/newfnetaFilterOuts.js?n=1"></script>
+		<script src="js1/f4helper.js?n=1"></script>
+
+		<script src="js1/jsondata.js"></script>
+		<script src="js1/utility.js"></script>
+		<script src="js1/loggedInUser.js"></script>
+		<script src="js1/dateFormatter.js"></script>
+
+		<script type="text/javascript" src="js1/globalize.js"></script>
+        <script type="text/javascript" src="js1/globalize.cultures.js"></script>
+		<script>
+
+		var fileTypeJson =[
+			      			{'fileextension': 'bas', 'mimetype': 'text/plain'},{'fileextension': 'bmp', 'mimetype': 'image/bmp'},{'fileextension': 'raw', 'mimetype': 'text/plain'},
+			      			{'fileextension': 'c', 'mimetype': 'text/plain'},{'fileextension': 'css', 'mimetype': 'text/css'},
+			      			{'fileextension': 'dir', 'mimetype': 'application/x-director'},{'fileextension': 'doc', 'mimetype': 'application/msword'},
+			      			{'fileextension': 'docx', 'mimetype': 'application/msword'},
+			      			{'fileextension': 'dot', 'mimetype': 'application/msword'},{'fileextension': 'gif', 'mimetype': 'image/gif'},
+			      			{'fileextension': 'gz', 'mimetype': 'application/x-gzip'},{'fileextension': 'h', 'mimetype': 'text/plain'},
+			      			{'fileextension': 'htm', 'mimetype': 'text/html'},{'fileextension': 'html', 'mimetype': 'text/html'},
+			      			{'fileextension': 'htt', 'mimetype': 'text/webviewhtml'},{'fileextension': 'ico', 'mimetype': 'image/x-icon'},
+			      			{'fileextension': 'ief', 'mimetype': 'image/ief'},{'fileextension': 'jfif', 'mimetype': 'image/pipeg'},
+			      			{'fileextension': 'jpe', 'mimetype': 'image/jpeg'},{'fileextension': 'jpeg', 'mimetype': 'image/jpeg'},
+			      			{'fileextension': 'jpg', 'mimetype': 'image/jpeg'},{'fileextension': 'ms', 'mimetype': 'application/x-troff-ms'},
+			      			{'fileextension': 'msg', 'mimetype': 'application/vnd.ms-outlook'},{'fileextension': 'pdf', 'mimetype': 'application/pdf'},
+			      			{'fileextension': 'pot', 'mimetype': 'application/vnd.ms-powerpoint'},{'fileextension': 'ppm', 'mimetype': 'image/x-portable-pixmap'},
+			      			{'fileextension': 'pps', 'mimetype': 'application/vnd.ms-powerpoint'},{'fileextension': 'ppt', 'mimetype': 'application/vnd.ms-powerpoint'},
+			      			{'fileextension': 'pptx', 'mimetype': 'application/vnd.ms-powerpoint'},
+			      			{'fileextension': 'rtx', 'mimetype': 'text/richtext'},{'fileextension': 'swf', 'mimetype': 'application/x-shockwave-flash'},
+			      			{'fileextension': 'tex', 'mimetype': 'application/x-tex'},{'fileextension': 'texi', 'mimetype': 'application/x-texinfo'},
+			      			{'fileextension': 'texinfo', 'mimetype': 'application/x-texinfo'},{'fileextension': 'tif', 'mimetype': 'image/tiff'},
+			      			{'fileextension': 'tiff', 'mimetype': 'image/tiff'},{'fileextension': 'txt', 'mimetype': 'text/plain'},
+			      			{'fileextension': 'wcm', 'mimetype': 'application/vnd.ms-works'},{'fileextension': 'wdb', 'mimetype': 'application/vnd.ms-works'},
+			      			{'fileextension': 'wks', 'mimetype': 'application/vnd.ms-works'},{'fileextension': 'wps', 'mimetype': 'application/vnd.ms-works'},
+			      			{'fileextension': 'xla', 'mimetype': 'application/vnd.ms-excel'},{'fileextension': 'xlc', 'mimetype': 'application/vnd.ms-excel'},
+			      			{'fileextension': 'xlm', 'mimetype': 'application/vnd.ms-excel'},{'fileextension': 'xls', 'mimetype': 'application/vnd.ms-excel'},
+			      			{'fileextension': 'xlsx', 'mimetype': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;'},
+			      			{'fileextension': 'xlt', 'mimetype': 'application/vnd.ms-excel'},{'fileextension': 'xlw', 'mimetype': 'application/vnd.ms-excel'},
+			      			{'fileextension': 'zip', 'mimetype': 'application/zip'},{'fileextension': 'csv', 'mimetype': 'application/vnd.ms-excel'}
+		      			];
+
+								function getServiceUrl(sServiceUrl) {
+								 //for local testing prefix with proxy
+								 //if you and your team use a special host name or IP like 127.0.0.1 for localhost please adapt the if statement below
+								 if (window.location.hostname == "localhost") {
+										 return "proxy/" + sServiceUrl;
+								 } else {
+										 return sServiceUrl;
+								 }
+								}
+
+				var serviceDEP = getServiceUrl('/sap/opu/odata/sap/ZMNR_DEP_SRV/');
+				var serviceLOGIN = getServiceUrl('/sap/opu/odata/sap/ZMNR_LOGIN_SRV');
+
+				var busyDialog = (busyDialog) ? busyDialog : new sap.m.BusyDialog(
+					{
+						//text : 'Please Wait',
+						//customIcon : 'images/ajax-loader.gif',
+						//title : 'Loading...'
+					});
+
+				sap.ui.localResources("zalp_25042017");
+				var app = new sap.m.App({initialPage:"idhome1"});
+				var page = sap.ui.view({id:"idhome1", viewName:"zalp_25042017.home", type:sap.ui.core.mvc.ViewType.JS});
+
+				app.addPage(page);
+				app.placeAt("content");
+
+				app.setBackgroundColor("#fffefe");
+		</script>
+
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+		<!-- <a href="https://newseaweb.seacoglobal.com/sap/opu/odata/sap/ZUI5_RCN_DOC_SRV/downloadSet(Filename='06_2017_2943_0002406970_2.jpg')/$value" title="Image Caption Here" data-spzoom>
+  			<img src="https://newseaweb.seacoglobal.com/sap/opu/odata/sap/ZUI5_RCN_DOC_SRV/downloadSet(Filename='06_2017_2943_0002406970_2.jpg')/$value" sizes="100x80" alt="thumb">
+		</a> -->
+	</body>
+</html>
